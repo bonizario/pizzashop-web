@@ -1,11 +1,8 @@
-import './global.css';
+import { RouterProvider } from 'react-router-dom';
 
-import { Button } from './components/ui/Button';
+import './global.css';
+import { router } from './router';
 
 export function App() {
-  return (
-    <div className="flex h-screen items-center justify-center">
-      <Button>Enviar</Button>
-    </div>
-  );
+  return <RouterProvider router={router} />;
 }
