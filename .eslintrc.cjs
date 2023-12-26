@@ -26,7 +26,20 @@ module.exports = {
   },
   plugins: ['react-refresh'],
   rules: {
+    'prettier/prettier': [
+      'error',
+      {
+        arrowParens: 'always',
+        printWidth: 80,
+        semi: true,
+        singleQuote: true,
+        tabWidth: 2,
+        trailingComma: 'all',
+        plugins: ['prettier-plugin-tailwindcss'],
+      },
+    ],
     '@typescript-eslint/consistent-type-definitions': ['error', 'type'],
+    'react/prop-types': 'off',
     'react-refresh/only-export-components': [
       'warn',
       {
@@ -57,18 +70,6 @@ module.exports = {
         ],
         distinctGroup: false,
         pathGroupsExcludedImportTypes: ['object', 'type'],
-      },
-    ],
-    'prettier/prettier': [
-      'error',
-      {
-        arrowParens: 'always',
-        printWidth: 80,
-        semi: true,
-        singleQuote: true,
-        tabWidth: 2,
-        trailingComma: 'all',
-        plugins: ['prettier-plugin-tailwindcss'],
       },
     ],
   },
